@@ -1,0 +1,6 @@
+/* Empty reset since Ionic handles global layout styles. Customize here if needed. */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

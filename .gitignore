@@ -1,0 +1,28 @@
+# .NET / C#
+bin/
+obj/
+**/bin/
+**/obj/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Node / Frontend
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+*.local
+
+# Database / Local data
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# IDE / Editors
+.idea/
+*.suo
+.DS_Store
+Thumbs.db

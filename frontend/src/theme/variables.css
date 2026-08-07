@@ -1,0 +1,136 @@
+/* Material Design 3 Custom Theme Variables */
+
+:root {
+  --ion-font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+
+  /* MD3 Primary - Vibrant Teal/Indigo accent */
+  --ion-color-primary: #3f51b5;
+  --ion-color-primary-rgb: 63, 81, 181;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #37474f;
+  --ion-color-primary-tint: #7986cb;
+
+  /* MD3 Secondary - Soft Violet */
+  --ion-color-secondary: #009688;
+  --ion-color-secondary-rgb: 0, 150, 136;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #00796b;
+  --ion-color-secondary-tint: #4db6ac;
+
+  /* MD3 Tertiary - Deep Amber for warnings/occupancy */
+  --ion-color-tertiary: #ff9800;
+  --ion-color-tertiary-rgb: 255, 152, 0;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade: #f57c00;
+  --ion-color-tertiary-tint: #ffb74d;
+
+  /* Success Green */
+  --ion-color-success: #4caf50;
+  --ion-color-success-rgb: 76, 175, 80;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #388e3c;
+  --ion-color-success-tint: #81c784;
+
+  /* Warning Yellow */
+  --ion-color-warning: #ffeb3b;
+  --ion-color-warning-rgb: 255, 235, 59;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #fbc02d;
+  --ion-color-warning-tint: #fff59d;
+
+  /* Error Red */
+  --ion-color-danger: #f44336;
+  --ion-color-danger-rgb: 244, 67, 54;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d32f2f;
+  --ion-color-danger-tint: #ef9a9a;
+
+  /* MD3 Surface and Backgrounds - Soft Lavender/Gray tints */
+  --ion-background-color: #f7f9fc;
+  --ion-background-color-rgb: 247, 249, 252;
+
+  --ion-text-color: #1a1c1e;
+  --ion-text-color-rgb: 26, 28, 30;
+
+  /* MD3 Containers and cards */
+  --card-background: #ffffff;
+  --card-border-radius: 20px;
+  --button-border-radius: 100px; /* MD3 Pill buttons */
+  --surface-tint: #f1f3f9;
+  --outline-color: #c4c7cc;
+}
+
+/* Dark Mode Configuration (Tailored to MD3 dark theme standards) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ion-background-color: #121318;
+    --ion-background-color-rgb: 18, 19, 24;
+
+    --ion-text-color: #e2e2e6;
+    --ion-text-color-rgb: 226, 226, 230;
+
+    --ion-color-primary: #b4c5ff;
+    --ion-color-primary-rgb: 180, 197, 255;
+    --ion-color-primary-contrast: #002a78;
+    --ion-color-primary-contrast-rgb: 0, 42, 120;
+    --ion-color-primary-shade: #8198e0;
+    --ion-color-primary-tint: #dbe1ff;
+
+    --ion-color-secondary: #80cbc4;
+    --ion-color-secondary-rgb: 128, 203, 196;
+    --ion-color-secondary-contrast: #003732;
+    --ion-color-secondary-contrast-rgb: 0, 55, 50;
+
+    --card-background: #1b1b1f;
+    --surface-tint: #232429;
+    --outline-color: #44474f;
+  }
+}
+
+/* Custom MD3 layout utility classes */
+.md3-card {
+  background: var(--card-background);
+  border-radius: var(--card-border-radius);
+  padding: 16px;
+  margin: 12px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .md3-card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+.md3-card:active {
+  transform: scale(0.98);
+}
+
+.md3-pill-button {
+  --border-radius: var(--button-border-radius);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.md3-input-container {
+  background: var(--surface-tint);
+  border-radius: 12px;
+  padding: 8px 16px;
+  margin-bottom: 12px;
+}
+
+/* Leaflet Map overrides for MD3 dark compatibility */
+.leaflet-container {
+  border-radius: var(--card-border-radius);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  z-index: 1;
+}
